@@ -1,19 +1,8 @@
 <script setup lang="ts">
-const maisonsListe: {
-    adresse: string;
-    collectionId: string;
-    collectionName: string;
-    created: string;
-    favori: boolean;
-    id: string;
-    image: string;
-    nbChambres: number;
-    nbSdb: number;
-    nomMaison: string;
-    prix: number;
-    surface: number;
-    updated: string;
-}[] = [
+import type { MaisonRecord } from '@/types';
+import MaisonCard from '@/components/MaisonCard.vue';
+
+const maisonsListe: MaisonRecord[] = [
     {
         "adresse": "2821 Lake Sevilla, Palm Harbor, TX",
         "collectionId": "sidpkt9hmbfwoeb",
@@ -60,8 +49,11 @@ const maisonsListe: {
         "updated": "2024-04-02 13:52:17.823Z"
     }
 ]
+console.log(maisonsListe);
+
 </script>
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
+  <MaisonCard />
 </template>
